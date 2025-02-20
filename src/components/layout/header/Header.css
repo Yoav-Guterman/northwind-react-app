@@ -1,0 +1,73 @@
+.Header {
+    /* Using flexbox for a three-section layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #ffffff;
+    /* Subtle shadow for depth without being too aggressive */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 64px;
+}
+
+/* Logo section */
+.Header .logo {
+    flex: 0 0 auto;
+    /* Prevents logo from growing or shrinking */
+}
+
+.Header .logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Main navigation */
+.Header .main-nav {
+    /* Center the navigation links */
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 2rem;
+}
+
+.Header nav a {
+    text-decoration: none;
+    color: #4a5568;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.Header nav a:hover {
+    /* Subtle background on hover */
+    background-color: #f8fafc;
+    color: #2c5282;
+}
+
+.Header .active {
+    /* Slightly more pronounced active state */
+    color: #2c5282;
+    background-color: #f0f7ff;
+}
+
+/* Logout section */
+.Header .auth-section {
+    flex: 0 0 auto;
+}
+
+.Header .logout-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: white;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.Header .logout-button:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}

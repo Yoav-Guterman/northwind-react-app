@@ -1,0 +1,103 @@
+.Products {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* 200px for categories, rest for products */
+    gap: 20px;
+    height: 100%;
+}
+
+.CategoryContainer {
+    grid-column: 1 / span 1;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    /* Add flex display */
+    flex-direction: column;
+    /* Stack links vertically */
+    gap: 10px;
+    /* Space between links */
+    height: 100%;
+}
+
+/* Style the NavLinks exactly like the header */
+.CategoryContainer a {
+    text-decoration: none;
+    color: #4a5568;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+    /* Makes links take full width */
+}
+
+.CategoryContainer a:hover {
+    background-color: #f7fafc;
+    color: #2c5282;
+}
+
+.CategoryContainer a.active {
+    color: #2c5282;
+    background-color: #ebf8ff;
+}
+
+
+
+.productContainer {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.topControls {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    /* Space for search + button */
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.searchBar {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    justify-self: center;
+}
+
+.searchBar:focus {
+    outline: none;
+    border-color: #2c5282;
+}
+
+.addButton {
+    padding: 10px 20px;
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.addButton:hover {
+    background-color: #1a365d;
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+    .Products {
+        flex-direction: column;
+    }
+
+    .CategoryContainer {
+        width: 100%;
+    }
+}

@@ -1,13 +1,15 @@
 import { JSX, useEffect, useState } from "react";
 import './Products.css'
-import productService from "../../../../service/northwind/product";
 import ProductModel from "../../../../models/product/product";
 import Product from "../product/product";
 import { NavLink } from "react-router-dom";
+import useService from "../../../../hooks/useService";
+import ProductService from "../../../../service/northwind/productService";
 
 export default function Products(): JSX.Element {
 
     const [products, setProducts] = useState<ProductModel[]>([])
+    const productService = useService(ProductService)
 
     useEffect(() => {
         (async () => {

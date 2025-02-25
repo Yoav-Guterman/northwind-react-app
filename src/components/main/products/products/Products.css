@@ -4,6 +4,8 @@
     /* 200px for categories, rest for products */
     gap: 20px;
     height: 100%;
+    overflow: hidden;
+    /* This prevents the main container from scrolling */
 }
 
 .CategoryContainer {
@@ -41,8 +43,6 @@
     color: #2c5282;
     background-color: #ebf8ff;
 }
-
-
 
 .productContainer {
     overflow-y: auto;
@@ -100,4 +100,18 @@
     .CategoryContainer {
         width: 100%;
     }
+}
+
+.CategoryContainer {
+    overflow-y: auto;
+    /* This enables vertical scrolling for categories */
+    max-height: 100vh;
+    /* This creates the scroll container */
+}
+
+.productContainer {
+    overflow-y: auto;
+    /* This enables vertical scrolling for products */
+    max-height: 450px;
+    /* This creates the scroll container */
 }

@@ -19,3 +19,7 @@
 .Layout>footer {
     grid-row: 3;
 }
+
+.auth-main {
+    grid-row: 1 / span 3;
+}
